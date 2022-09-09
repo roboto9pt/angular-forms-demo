@@ -1,21 +1,23 @@
 App signup here
-<form class="form" [formGroup]="signUpForm" (ngSubmit)="onFormSubmit()">
+<form class="form" [formGroup]="signUpForm">
   <div>
     <div class="field">
-      <label for="title">Title</label>
-      <select id="title">
+      <label for="title">Title <span class="required" *ngIf="isRequiredField('firstName')">*</span></label>
+      <select id="title" formControlName="title">
         <option *ngFor="let title of getTitles() | async">{{ title }}</option>
       </select>
     </div>
+    
     <div class="field">
-      <label for="firstName">First name</label>
+      <label for="firstName">First name <span class="required" *ngIf="isRequiredField('firstName')">*</span></label>
       <input id="firstName" formControlName="firstName" />
-    </div>
-    <div *ngIf="signUpForm.invalid">This field is mandatory</div>
+    </div>    
+
     <div class="field">
-      <label for="lastName" formControlName="lastName">Surname</label>
-      <input id="lastName" />
+      <label for="lastName">Surname <span class="required" *ngIf="isRequiredField('lastName')">*</span></label>
+      <input id="lastName" formControlName="lastName"/>
     </div>
+
     <div class="field">
       <label for="age">Age</label>
       <input id="age" formControlName="age" />
@@ -27,10 +29,15 @@ App signup here
         id="termsAccepted"
         formControlName="termsAccepted"
       />
-      <label>I accept the terms and conditions</label>
+      <label>I accept the terms and conditions <span class="required" *ngIf="isRequiredField('termsAccepted')">*</span></label>
     </div>
     <div>
-      <button class="button--submit" [disabled]="signUpForm.invalid">
+      <button
+        class="button--submit"
+        type="submit"
+        (click)="submitForm()"
+        [disabled]="signUpForm.invalid || !signUpForm.controls.termsAccepted"
+      >
         Submit
       </button>
     </div>

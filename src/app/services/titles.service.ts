@@ -3,11 +3,9 @@ import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class TitlesService {
+  constructor() {}
 
-  constructor() { }
-
-  getTitles():Observable<string[]>{
-    return of(['Mr','Miss'])
+  getTitles(): Observable<string[]> {
+    return of(['', 'Mr', 'Miss','Dr','Prof']);
   }
-
 }
