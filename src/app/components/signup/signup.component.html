@@ -1,0 +1,38 @@
+App signup here
+<form class="form" [formGroup]="signUpForm" (ngSubmit)="onFormSubmit()">
+  <div>
+    <div class="field">
+      <label for="title">Title</label>
+      <select id="title">
+        <option *ngFor="let title of getTitles() | async">{{ title }}</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="firstName">First name</label>
+      <input id="firstName" formControlName="firstName" />
+    </div>
+    <div *ngIf="signUpForm.invalid">This field is mandatory</div>
+    <div class="field">
+      <label for="lastName" formControlName="lastName">Surname</label>
+      <input id="lastName" />
+    </div>
+    <div class="field">
+      <label for="age">Age</label>
+      <input id="age" formControlName="age" />
+    </div>
+
+    <div>
+      <input
+        type="checkbox"
+        id="termsAccepted"
+        formControlName="termsAccepted"
+      />
+      <label>I accept the terms and conditions</label>
+    </div>
+    <div>
+      <button class="button--submit" [disabled]="signUpForm.invalid">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

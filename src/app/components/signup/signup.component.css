@@ -1,0 +1,43 @@
+.form{
+  margin-top: 10px;
+  padding:35px;
+  margin-left:25px;
+  width:400px;
+  border-width: 5px;
+  border-color: darkslategray;
+  border-style: solid;
+  
+}
+
+.field{
+  width:100%;
+  margin-bottom: 10px;;
+  display:flex;
+}
+
+.field input,
+.field select{
+  width:100%;
+  flex-grow:1;
+}
+
+input[type="checkbox"]{
+  background-color: red;
+}
+
+label {
+  width:120px;
+  margin-right: 15px;  
+}
+
+.button--submit{
+  height:30px;
+  width:80px;
+  float:right;
+  margin-bottom: 30px;
+  background-color: blue;
+  color:white;
+  border: 2px;    
+  border-radius: 3px;
+
+}
