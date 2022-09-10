@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { SurveyService } from "src/app/services/survey.service";
+import { SurveyService } from "../../services/survey.service";
 
 @Component({
   selector: "app-prompts",
