@@ -1,0 +1,20 @@
+<table class="table--prompts">
+  <thead>
+    <tr>
+      <td class="prompts--text"></td>
+      <td class="prompts--scale">Strongly Disagree</td>
+      <td class="prompts--scale">Disagree</td>
+      <td class="prompts--scale">Neutral</td>
+      <td class="prompts--scale">Agree</td>
+      <td class="prompts--scale">Strongly Agree</td>
+    </tr>
+  </thead>
+  <tr *ngFor="let p of getPrompts()|async">
+     <td class="prompts--text">{{p}}</td>
+      <td class="prompts--scale"></td>
+      <td class="prompts--scale"></td>
+      <td class="prompts--scale"></td>
+      <td class="prompts--scale"></td>
+      <td class="prompts--scale"></td>
+  </tr>
+</table>
