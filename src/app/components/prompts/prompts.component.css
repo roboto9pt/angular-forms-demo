@@ -1,12 +1,30 @@
 .table--prompts {
   margin-left: 25px;
-  width: 740px;
+  width: 800px;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .prompts--text {
-  width: 150px;
+  width: 220px;
 }
 
-.prompts--scale{
-    width:50px;
+.prompts--scale {
+  width: 50px;
+}
+
+.prompts--scale-0 {
+  color: 50px;
+}
+.prompts--scale-1 {
+  width: 50px;
+}
+.prompts--scale-2 {
+  width: 50px;
+}
+.prompts--scale-3 {
+  width: 50px;
+}
+.prompts--scale-4 {
+  width: 50px;
 }

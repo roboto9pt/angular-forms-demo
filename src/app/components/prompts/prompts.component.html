@@ -2,19 +2,19 @@
   <thead>
     <tr>
       <td class="prompts--text"></td>
-      <td class="prompts--scale">Strongly Disagree</td>
-      <td class="prompts--scale">Disagree</td>
-      <td class="prompts--scale">Neutral</td>
-      <td class="prompts--scale">Agree</td>
-      <td class="prompts--scale">Strongly Agree</td>
+      <td class="prompts--scale-0">Strongly Disagree</td>
+      <td class="prompts--scale-1">Disagree</td>
+      <td class="prompts--scale-2">Neutral</td>
+      <td class="prompts--scale-3">Agree</td>
+      <td class="prompts--scale-4">Strongly Agree</td>
     </tr>
   </thead>
-  <tr *ngFor="let p of getPrompts()|async">
-     <td class="prompts--text">{{p}}</td>
-      <td class="prompts--scale"></td>
-      <td class="prompts--scale"></td>
-      <td class="prompts--scale"></td>
-      <td class="prompts--scale"></td>
-      <td class="prompts--scale"></td>
+  <tr *ngFor="let p of getPrompts() | async">
+    <td class="prompts--text">{{ p.text }}</td>
+    <td class="prompts--scale"><input type="radio" name="{{p.id}}" id="{{p.id}}" value="{{p.id}}|-2"/></td>
+    <td class="prompts--scale"><input type="radio" name="{{p.id}}" id="{{p.id}}" value="{{p.id}}|-1"/></td>
+    <td class="prompts--scale"><input type="radio" name="{{p.id}}" id="{{p.id}}" value="{{p.id}}|0"/></td>
+    <td class="prompts--scale"><input type="radio" name="{{p.id}}" id="{{p.id}}" value="{{p.id}}|1"/></td>
+    <td class="prompts--scale"><input type="radio" name="{{p.id}}" id="{{p.id}}" value="{{p.id}}|2"/></td>
   </tr>
 </table>
