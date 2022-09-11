@@ -8,10 +8,11 @@ import { TitlesService } from './services/titles.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { PromptsComponent } from './components/prompts/prompts.component';
 import { SurveyService } from './services/survey.service';
+import { McqComponent } from './components/mcq/mcq.component';
 
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule],
-  declarations: [AppComponent, HelloComponent, SignupComponent, PromptsComponent],
+  declarations: [AppComponent, HelloComponent, SignupComponent, PromptsComponent, McqComponent],
   bootstrap: [AppComponent],
   providers: [TitlesService, SurveyService],
 })

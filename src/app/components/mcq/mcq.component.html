@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+
+
+<div>
+  <div>{{ mcq.prompt }}</div>
+  <div>
+    <select>
+      <option *ngFor="let c of mcq.options">{{ c }}</option>
+    </select>
+  </div>
+</div>
+
+<div>
+  <div>{{ mcq.prompt }}</div>
+  <div>
+    <div *ngFor="let c of mcq.options">      
+      <input
+        type="radio"
+        name="{{ mcq.id }}"
+        id="{{ mcq.id }}"
+        value="{{ c }}"
+      />
+      <label for="{{ mcq.id }}">{{ c }}</label>
+    </div>
+  </div>
+</div>
