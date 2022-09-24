@@ -9,10 +9,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { PromptsComponent } from './components/prompts/prompts.component';
 import { SurveyService } from './services/survey.service';
 import { McqComponent } from './components/mcq/mcq.component';
+import { BigboxmcqComponent } from './components/bigboxmcq/bigboxmcq.component';
 
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule],
-  declarations: [AppComponent, HelloComponent, SignupComponent, PromptsComponent, McqComponent],
+  declarations: [AppComponent, HelloComponent, SignupComponent, PromptsComponent, McqComponent, BigboxmcqComponent],
   bootstrap: [AppComponent],
   providers: [TitlesService, SurveyService],
 })

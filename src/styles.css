@@ -1,1 +1,91 @@
 /* Add application styles & imports to this file! */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+  width: 68%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-item {
+  border: 1px solid #9faab7;
+  padding: 20px;
+  margin: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+label {
+  display: block;
+  line-height: 40px;
+}
+.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+  border-radius: 50%;
+}
+.radio:hover {
+  background: #9faab7;
+}
+.radio:checked {
+  background: #40e0d0;
+}
+.radio:checked::before {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  content: "\f00c";
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 5 Free";
+}
+.radio::after {
+  border-radius: 50%;
+}
+.radio:checked::after {
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}

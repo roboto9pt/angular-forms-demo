@@ -9,7 +9,6 @@ import { SurveyService } from "../../services/survey.service";
 })
 export class PromptsComponent implements OnInit {
   constructor(private surveyService: SurveyService) {}
-
   getPrompts(): Observable<Prompt[]> {
     return this.surveyService.getPrompts(1);
   }

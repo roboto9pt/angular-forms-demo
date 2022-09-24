@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Grid Example</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      .grid-container {
+        height: 100vh;
+        border: 10px solid #14a76c;
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-item {
+        border: 2px solid #ff652f;
+        padding: 20px;
+        margin: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      label {
+        display: block;
+        line-height: 40px;
+      }
+      .radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        top: 13.33333px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        transition: all 0.15s ease-out 0s;
+        background: #cbd1d8;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+        border-radius: 50%;
+      }
+      .radio:hover {
+        background: #9faab7;
+      }
+      .radio:checked {
+        background: #40e0d0;
+      }
+      .radio:checked::before {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        content: "\f00c";
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        font-family: "Font Awesome 5 Free";
+      }
+      .radio::after {
+        border-radius: 50%;
+      }
+      .radio:checked::after {
+        background: #40e0d0;
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item item-1">
+        <label for="q1">
+          <input type="radio" class="radio circle" name="movies" />
+          The cat sat on the mat</label
+        >
+      </div>
+      <div class="grid-item item-2">
+        <label for="q1"
+          ><input type="radio" name="movies" class="radio circle" />Die Hard 4:
+          Die with a vengeance</label
+        >
+      </div>
+      <div class="grid-item item-3">
+        <label for="q1"
+          ><input type="radio" name="movies" class="radio circle" />Rambo: First
+          Blood</label
+        >
+      </div>
+      <div class="grid-item item-4">
+        <label for="q1"
+          ><input type="radio" name="movies" class="radio circle" />Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur</label
+        >
+      </div>
+      <div class="grid-item item-5">
+        <label for="q1"
+          ><input type="radio" name="movies" class="radio circle" />Inglorius
+          Bastids</label
+        >
+      </div>
+    </div>
+  </body>
+</html>
