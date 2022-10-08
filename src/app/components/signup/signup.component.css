@@ -1,55 +1,58 @@
-.form{
+.form {
   margin-top: 10px;
-  padding:35px;
-  margin-left:25px;
-  width:400px;
+  padding: 35px;
+  margin-left: 25px;
+  width: 500px;
   border-width: 1px;
   border-color: darkslategray;
   border-style: solid;
-  
 }
 
-.field{
-  width:100%;
-  margin-bottom: 10px;;
-  display:flex;
+.field {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
 }
 
 .field input,
-.field select{
-  width:100%;
-  flex-grow:1;
+.field select {
+  width: 100%;
+  flex-grow: 1;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   background-color: red;
 }
 
 label {
-  width:140px;
-  margin-right: 15px;  
+  width: 140px;
+  margin-right: 15px;
+}
+.checkbox {
+  margin-left: 120px;
+}
+.checkbox-label {
+  width: 300px;
+  margin-left: 10px;
 }
 
-.required{
-  color:crimson;  
+.required {
+  color: crimson;
 }
 
-.button--submit{
-  height:30px;
-  width:80px;
-  float:right;
-    
+.button--submit {
+  height: 30px;
+  width: 80px;
+  float: right;
 }
 
-
-.ng-invalid.ng-untouched:not(form):not(div)  {
-  border-left: 5px solid #42A948; /* green */
+.ng-invalid.ng-untouched:not(form):not(div) {
+  border-left: 5px solid #42a948; /* green */
 }
-  
-.ng-invalid.ng-touched:not(form):not(div)  {
+
+.ng-invalid.ng-touched:not(form):not(div) {
   border-left: 5px solid #a94442; /* red */
-  border-top:1px solid #a94442;
-  border-bottom:1px solid #a94442;
-  border-right:1px solid #a94442;
-
+  border-top: 1px solid #a94442;
+  border-bottom: 1px solid #a94442;
+  border-right: 1px solid #a94442;
 }

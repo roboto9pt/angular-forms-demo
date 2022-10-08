@@ -1,16 +1,24 @@
 <div class="bigbox shadow">
   <div>
-    Trivial Pursuit is a good game to play in groups. Because questions are in
-    different categories, the game can highlight different teammates’ areas of
-    expertise and give each player a chance to shine.
+    {{ question.text }}
   </div>
   <hr class="rounded" />
   <div class="grid-container">
-    <div *ngFor="let item of options" class="grid-item">
+    <div *ngFor="let item of question.options" class="grid-item">
       <label for="item.id">
         <input type="radio" class="radio" name="movies" />
         {{ item.option }}
       </label>
     </div>
+  </div>
+  <div class="navigation">
+    <button (click)="goBack()" [disabled]="questionIndex == 0">Back</button>
+
+    <button
+      (click)="goForward()"
+      [disabled]="questionIndex > questions.length - 2"
+    >
+      Forward
+    </button>
   </div>
 </div>

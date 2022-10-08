@@ -32,8 +32,7 @@ hr.rounded {
   text-overflow: ellipsis;
 }
 
-label {
-  display: block;
+label {  
   line-height: 40px;
 }
 .radio {

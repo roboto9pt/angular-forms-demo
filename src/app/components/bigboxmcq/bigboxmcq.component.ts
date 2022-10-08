@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { IOption, IQuestion } from "./IInterfaces";
 
 @Component({
   selector: "app-bigboxmcq",
@@ -6,30 +7,25 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./bigboxmcq.component.css"],
 })
 export class BigboxmcqComponent implements OnInit {
-  options = [
-    {
-      option: "The Cat on the Mat",
-      id: "q1",
-    },
-    {
-      option: "Rambo: First Blood",
-      id: "q2",
-    },
-    {
-      option: "The Invisible Guest",
-      id: "q3",
-    },
-    {
-      option: "The Nutcracker",
-      id: "q4",
-    },
-    {
-      option: "The Exam",
-      id: "q5",
-    },
-  ];
+  @Input() questions: IQuestion[];
+  question: IQuestion;
+  questionIndex: number = 0;
+  forwardEnabled: boolean = true;
+  backEnabled: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  goBack(): void {
+    this.questionIndex = this.questionIndex - 1;
+    this.question = this.questions[this.questionIndex];
+  }
+
+  goForward(): void {
+    this.questionIndex = this.questionIndex + 1;
+    this.question = this.questions[this.questionIndex];
+  }
+
+  ngOnInit(): void {
+    this.question = this.questions[this.questionIndex];
+  }
 }
